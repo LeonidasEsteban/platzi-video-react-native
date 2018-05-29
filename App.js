@@ -9,7 +9,8 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  Image,
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -24,6 +25,10 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
+        <Image
+          source={require('./assets/logo.png')}
+          style={{width:300, height: 80}}
+        />
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
