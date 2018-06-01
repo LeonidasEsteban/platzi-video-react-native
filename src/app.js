@@ -15,6 +15,8 @@ import Search from './sections/containers/search';
 class AppLayout extends Component {
   async componentDidMount() {
     const categoryList = await API.getMovies();
+    console.log('Esta es la lista de categorías')
+    console.table(categoryList);
     this.props.dispatch({
       type: 'SET_CATEGORY_LIST',
       payload: {
